@@ -1,0 +1,12 @@
+version: '3'
+services:
+  myapp-main:
+    image: sdat_qap2_s4:latest
+    ports:
+      - 8080:8080
+    environment:
+      - spring.datasource.url=jdbc:mysql://host.docker.internal:3306/sdat_qap2_s4
+      #- spring.datasource.url=jdbc:mysql://s4-fall-2022.ce2vcezehro2.us-east-1.rds.amazonaws.com/fall_2022
+      - spring.datasource.password=keyin2022
+      - spring.datasource.username=root
+      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
